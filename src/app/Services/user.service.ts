@@ -6,12 +6,15 @@ import { User } from '../Models/User';
   providedIn: 'root'
 })
 export class UserService {
-  apiUrl: String = 'https://green-life-artemisas.herokuapp.com'
+  apiUrl: String = 'https://keycode-book.herokuapp.com'
   constructor(
     private http: HttpClient
   ) { }
 
   createUser(formData){
     return this.http.post<User>(`${this.apiUrl}/user/create`, formData)
+  }
+  login(formData){
+    return this.http.post<User>(`${this.apiUrl}/login`, formData)
   }
 }

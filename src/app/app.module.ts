@@ -23,7 +23,8 @@ const routesApp : Routes=[
   },
   {
     path: 'sign-up', component:SignUpComponent
-  }
+  },
+  {path: 'login' , component: LoginComponent}
 ]
 @NgModule({
   declarations: [

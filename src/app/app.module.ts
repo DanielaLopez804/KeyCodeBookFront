@@ -15,6 +15,8 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { HomeComponent } from './Components/home/home.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { LoginComponent } from './Components/login/login.component';
+import { CreateBookComponent } from './Components/create-book/create-book.component';
+import { ListBookComponent } from './Components/list-book/list-book.component';
 
 
 const routesApp : Routes=[
@@ -24,7 +26,10 @@ const routesApp : Routes=[
   {
     path: 'sign-up', component:SignUpComponent
   },
-  {path: 'login' , component: LoginComponent}
+  {path: 'login' , component: LoginComponent},
+  {path: 'create-book', component:CreateBookComponent},
+  {path: 'list-book', component:ListBookComponent},
+  
 ]
 @NgModule({
   declarations: [
@@ -33,7 +38,9 @@ const routesApp : Routes=[
     FooterComponent,
     HomeComponent,
     SignUpComponent,
-    LoginComponent
+    LoginComponent,
+    CreateBookComponent,
+    ListBookComponent
   ],
   imports: [
     BrowserModule,

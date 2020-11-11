@@ -10,7 +10,7 @@ export class StorageService {
   //auth$ => Estamos indicando que es una variable reactiva.
   auth$ = this.auth.asObservable();//Inidica que nos podemos suscribir, ósea escuchar los cambios de  la variable
 
-  constructor() { }
+  constructor() {this.auth.next(this.dataUser())}
 
   saveToken(token){
     localStorage.setItem('session', token)

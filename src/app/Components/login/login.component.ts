@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
             this.router.navigate(['/list-book'])
           }
 
-          this.router.navigate(['/create-book'])
+          
           //console.log(dataUser['token'])
         },
         (error) =>{

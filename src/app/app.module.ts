@@ -18,6 +18,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { CreateBookComponent } from './Components/create-book/create-book.component';
 import { ListBookComponent } from './Components/list-book/list-book.component';
 
+import {AuthGuard} from './Guards/auth.guard'
 
 const routesApp : Routes=[
   {
@@ -27,8 +28,8 @@ const routesApp : Routes=[
     path: 'sign-up', component:SignUpComponent
   },
   {path: 'login' , component: LoginComponent},
-  {path: 'create-book', component:CreateBookComponent},
-  {path: 'list-book', component:ListBookComponent},
+  {path: 'create-book', canActivate:[AuthGuard] , data: {only:'Admin'}/*, type; 'premium'*/,component:CreateBookComponent},
+  {path: 'list-book',canActivate:[AuthGuard],component:ListBookComponent},
   
 ]
 @NgModule({

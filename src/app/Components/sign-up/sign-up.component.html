@@ -9,15 +9,15 @@
     <h1>
         Registrate en KeyCode Book
     </h1>
-    <form [formGroup]="signUpForm" (ngsubmit)="saveUser()">
+    <form [formGroup]="signUpForm" (ngSubmit)="saveUser()">
         <div class="form-row" >
             <div class="form-group col-md-6" >
               <label>Nombres</label>
-              <input formControlName ="firstName" type="text" class="form-control" >
+              <input formControlName ="firstName" id="firstName" type="text" class="form-control" >
             </div>
             <div class="form-group col-md-6" >
               <label>Apellidos</label>
-              <input formControlName ="lastName" type="text" class="form-control" >
+              <input formControlName ="lastName" id="lastName" type="text" class="form-control" >
             </div>
           </div>
           <div class="form-row" >

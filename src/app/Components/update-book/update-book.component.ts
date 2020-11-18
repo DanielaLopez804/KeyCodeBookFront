@@ -71,6 +71,8 @@ export class UpdateBookComponent implements OnInit {
       alert('Todos los campos deben estar llenos')
     }
   }
+
+  
   getGenre(){
     this.genreService.getAll().subscribe(
       (genres) => {

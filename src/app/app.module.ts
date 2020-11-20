@@ -31,7 +31,7 @@ const routesApp : Routes=[
   },
   {path: 'login' , component: LoginComponent},
   {path: 'create-book', canActivate:[AuthGuard] , data: {only:'Admin'}/*, type; 'premium'*/,component:CreateBookComponent},
-  {path: 'list-book',canActivate:[AuthGuard],component:ListBookComponent},
+  {path: 'list-book',canActivate:[AuthGuard],data: {only:['Admin','User']},component:ListBookComponent},
   { path: 'create-genre', canActivate: [AuthGuard], data: {only: 'Admin'}, component: CreateGenreComponent  },
   { path: 'update-book/:id', canActivate: [AuthGuard], data: {only: 'Admin'}, component: UpdateBookComponent },
 ]

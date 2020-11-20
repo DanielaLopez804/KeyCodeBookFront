@@ -11,8 +11,11 @@
                   <li class="list-group-item"><b>Editorial: </b> {{b.publisher}} </li>
                   <li class="list-group-item"><b>Fecha de publicación: </b> {{b.publicationDate}} </li>
                 </ul>
-                <a class="card-link" (click)="updateBook(b)" >Modificar</a>
-                <a href="#" class="card-link">Another link</a>
+                <div *ngIf="roleUser">
+                  <a class="card-link" (click)="updateBook(b)" >Modificar</a>
+                  <a class="card-link" (click)="removeBook(b._id)">Eliminar</a>
+                </div>
+                
               </div>
           </div>
       </div>
